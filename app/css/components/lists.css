@@ -1,0 +1,106 @@
+@import 'common/common';
+@import 'list';
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(360px, 720px);
+  grid-row-gap: 8px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  font-weight: normal;
+  font-smoothing: antialiased;
+}
+
+.main > .button {
+  @apply --buttonHorizontal;
+}
+
+.main > .button:hover {
+  background: var(--colorGreenH);
+}
+
+.main > .lists {
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 12px;
+  padding: 0 7px 7px 7px;
+  color: white;
+  background: var(--colorGreyblue);
+  grid-row-gap: 5px;
+}
+
+.main > .lists > .title {
+  @apply --boxHeader;
+}
+
+.main > .lists > .list {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  background: rgba(255, 255, 255, 0.4);
+  align-items: center;
+}
+
+.main > .lists > .list:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main > .lists > .list a {
+  padding: 3px 0px;
+}
+
+.main > .lists > .list img {
+  width: 40px;
+  height: 40px;
+}
+
+.main > .lists > .list > .container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 5px;
+}
+
+.main > .lists > .list > .container:hover,
+.main > .lists > .list > .button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main > .lists > .list:nth-child(odd) > .container:hover,
+.main > .lists > .list:nth-child(odd) > .button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.main > .lists > .list > .container > .d-text {
+  text-align: center;
+  font-size: var(--fontM);
+}
+
+.main > .lists > .list > .button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 54px;
+  height: 50px;
+  border-left: 4px solid var(--colorGreyblue);
+}
+
+.main > .lists > .list > .button img {
+  width: 40px;
+  height: 40px;
+}
+
+.main > .lists > .expand {
+  text-align: center;
+}
+
+.main > .lists > .expand:hover {
+  text-decoration: underline;
+}

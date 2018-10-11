@@ -1,0 +1,42 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+.navigation {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: 60px;
+  grid-column-gap: 7px;
+}
+
+.navigation > .button {
+  background: var(--colorGreen);
+}
+
+.navigation > .button:first-child {
+  transform: rotate(180deg);
+}
+
+.navigation > .b-text {
+  background: var(--colorGreen);
+  padding: 16px 0;
+  text-align: center;
+  font-size: var(--fontL);
+  color: white;
+}
+
+.navigation > .b-text.left {
+  grid-column: 1 / span 2;
+}
+
+.navigation > .b-text.right {
+  grid-column: 2 / span 2;
+}
+
+.navigation > .b-text.full {
+  grid-column: 1 / span 3;
+}
+
+.navigation > a:hover {
+  background: var(--colorGreenH);
+}

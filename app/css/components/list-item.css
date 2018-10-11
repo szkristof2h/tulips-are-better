@@ -1,0 +1,244 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+.fictions {
+  display: grid;
+  margin-top: 10px;
+  grid-row-gap: 12px;
+}
+
+.fictions > .fiction {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  max-width: 720px;
+}
+
+.fictions > .fiction > .cover {
+  grid-row: 1 / span 2;
+  height: 150px;
+}
+
+.fictions > .fiction.extended > .cover {
+  grid-row: 1 / span 3;
+  height: 150px;
+}
+
+.fictions > .fiction > .cover > img {
+  width: 100px;
+  height: 150px;
+}
+
+.fictions > .fiction > .details {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr;
+  color: white;
+  margin-left: 5px;
+  padding: 0 0 0 0px;
+  align-content: start;
+}
+
+.fictions > .fiction > .details > .d-title {
+  padding-top: 5px;
+  font-size: var(--fontL);
+  text-align: center;
+  background: var(--colorGreen);
+  margin-right: 5px;
+}
+
+.fictions > .fiction > .details > .container {
+  display: grid;
+  grid-template-columns: 1fr 20px auto 20px auto 20px auto 20px auto 20px auto 1fr;
+  background: var(--colorGreen);
+  max-height: 70px;
+  margin-right: 5px;
+}
+
+.fictions > .fiction > .details > .container > .d-text {
+  padding: 0 20px 0 5px;
+}
+
+.fictions > .fiction > .details > .container > a:hover {
+  text-decoration: underline;
+}
+
+.fictions > .fiction > .details > .container > .d-text:nth-last-child(2) {
+  padding: 0 0 0 5px;
+}
+
+.fictions > .fiction > .details > .info {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  height: 70px;
+  background: var(--colorGreen);
+}
+
+.fictions > .fiction > .details > .delete {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  width: 70px;
+  height: 70px;
+  background: var(--colorGreen);
+}
+
+.fictions > .fiction > .details > .info:hover, 
+.fictions > .fiction > .details > .delete:hover {
+  background: var(--colorGreenH);
+}
+
+.fictions > .fiction > .d-categories {
+  display: none;
+  grid-column: 2 / span 1;
+  grid-row: 2;
+  background: var(--colorBrown);
+  font-size: var(--fontMM);
+  text-align: center;
+  max-height: 28px;
+  padding: 3px;
+  color: white;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.fictions > .fiction a:hover {
+  text-decoration: underline;
+}
+
+.fictions > .fiction .d-text {
+  margin: 0 3px;
+}
+
+.fictions > .fiction.extended > .d-categories {
+  display: block;
+}
+
+.fictions > .fiction > .d-tags {
+  display: none;
+  grid-column: 2 / span 1;
+  grid-row: 3;
+  font-size: var(--fontS);
+  color: #eee;
+  padding: 5px 5px 0 5px;
+  margin-left: 5px;
+  border-bottom: 5px solid var(--colorBrown);
+  background: var(--colorBrown);
+  text-align: center;
+  height: 50px;
+  overflow-y: hidden;
+}
+
+.fictions > .fiction.extended > .d-tags {
+  display: block;
+}
+
+.fictions > .fiction > .summary {
+  grid-column: 2 / span 1;
+  background: white;
+  color: black;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 5px 5px 0 5px;
+  border-bottom: 5px solid white;
+  height: 75px;
+  overflow: hidden;
+  font-size: var(--fontS);
+}
+
+.fictions > .fiction.extended > .summary {
+  display: block;
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  margin-left: 0;
+  min-height: 75px;
+  height: auto;
+}
+
+.fictions > .fiction.extended > .summary > p:last-child {
+  margin-bottom: 0;
+}
+
+.fictions > .fiction.extended > .details {
+  grid-row: 1 / span 1;
+}
+
+.fictions > .fiction > .summary p:first-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .fictions > .fiction.extended {
+    grid-template-rows: auto 50px 105px auto;
+  }
+
+  .fictions > .fiction > .details {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    max-height: 500px;
+    margin: 0;
+  }
+  
+  .fictions > .fiction > .details > .container {
+    grid-template-columns: 20px auto 20px auto 20px auto;
+    font-size: var(--fontS);
+    padding: 0 5px;
+  }
+
+  .fictions > .fiction > .details > .d-title {
+    font-size: var(--fontM);
+  }
+
+  .fictions > .fiction > .cover {
+    display:none
+  }
+
+  .fictions > .fiction.extended > .cover {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0;
+    max-height: 150px;
+    grid-row: 2 / span 2;
+  }
+
+  .fictions > .fiction > .summary {
+    grid-column: 1 / span 2;
+    margin-left: 0;
+    grid-row: 2;
+    max-height: 150px;
+  }
+
+  .fictions > .fiction.extended > .summary {
+    max-height: initial;
+  }
+
+  .fictions > .fiction > .details > .container > .placeholder {
+    display: none;
+  }
+
+  .fictions > .fiction > .d-categories {
+    margin-top: 5px;
+    max-height: initial;
+    height: 50px;
+    overflow-y: hidden;
+    white-space: initial;
+  }
+
+  .fictions > .fiction > .d-tags {
+    border-bottom: 7px solid var(--colorBrown);
+    padding-top: 7px;
+    max-height: initial;
+    height: 105px;
+    margin-bottom: 0;
+    overflow-y: hidden;
+  }
+}
+
+@media screen and (min-width: 525px) and (max-width: 750px) {
+  .fictions > .fiction > .details > .container {
+    grid-template-columns: 20px auto 20px auto 20px auto 20px auto 20px auto;
+  }
+}

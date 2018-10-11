@@ -1,0 +1,198 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/layout';
+@import 'common/typography';
+
+.message {
+  display: none;
+  position: fixed;
+  top: 40%;
+  justify-content: center;
+  padding: 0 12px 12px 12px;
+  color: white;
+  text-align: center;
+}
+
+.message.addAuthor {
+  top: 30%;
+}
+
+.message.fiction-list {
+  overflow-y: scroll;
+}
+
+.message.fiction-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.message.fiction-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.green {
+  background: var(--colorGreenH);
+}
+
+.blue {
+  background: var(--colorGreyblue);
+}
+
+.dark-blue {
+  background: #333f48;
+}
+
+.message > .header {
+  @apply --boxHeader;
+}
+
+.message > .text {
+  grid-row: 2;
+  font-size: var(--fontM);
+}
+
+.show {
+  display: grid;
+  grid-row-gap: 5px;
+}
+
+.message > .list {
+  display: grid;
+  grid-row: 2;
+  grid-row-gap: 3px;
+  font-size: var(--fontM);
+}
+
+.message > .list > .header {
+  padding: 3px 5px;
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.message > .list > .header:nth-child(even) {
+  background: rgb(255, 255, 255, 0.4);
+}
+
+.message > .list a:hover {
+  text-decoration: underline;
+}
+
+.message > .button {
+  grid-row: 3;
+  padding: 5px 0;
+  background: rgb(0, 0, 0, 0.2);
+}
+
+.message > .button:hover {
+  background: rgb(255, 255, 255, 0.1);
+}
+
+.message > .button.rating {
+  grid-row: 4;
+  background: rgb(0, 0, 0, 0.4);
+}
+
+
+.message > .button.rating:hover {
+  background: rgb(255, 255, 255, 0.1);
+}
+.add-author {
+  display: grid;
+  grid-template-columns: 1fr 170px 165px 120px 1fr;
+  grid-row-gap: 10px;
+}
+
+.add-author > .info {
+  grid-column: 1 / span 5;
+}
+
+.add-author > .info:nth-child(2) {
+  grid-column: 1 / span 5;
+  background: rgb(255, 255, 255, 0.2);
+  padding: 7px 0;
+}
+
+.add-author > .label {
+  grid-column: 1 / span 5;
+}
+
+.add-author > .input {
+  grid-column: 1 / span 5;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: var(--fontText);
+}
+
+.add-author > .container {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fontMP);
+}
+
+.add-author > .button {
+  grid-column: 1 / span 5;
+  padding: 5px 0;
+  background: rgb(0, 0, 0, 0.4);
+}
+
+.add-author > .button:hover {
+  grid-column: 1 / span 5;
+  padding: 5px 0;
+  background: rgb(255, 255, 255, 0.1);
+}
+
+.add-rating {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-row-gap: 5px;
+}
+
+.add-rating > .container {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr repeat(10, 25px);
+  font-size: var(--fontM);
+}
+
+.add-rating > .container > .d-text {
+  background: rgb(0, 0, 0, 0.2);
+  text-align: left;
+  padding: 3px;
+}
+
+.add-rating > .container > .d-num {
+  background: rgb(0, 0, 0, 0.4);
+  padding: 3px 0;
+}
+
+.add-rating > .container > .d-num:hover {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.add-rating > .container > .d-num.active {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.submit-button {
+  background: rgb(0, 0, 0, 0.2);
+  padding: 5px 0;
+}
+
+.submit-button:hover {
+  background: rgb(255, 255, 255, 0.1);
+}
+
+
+
+@media screen and (min-width: 525px) and (max-width: 750px) {
+  .message {
+    width: 515px !important;
+    margin: 0 5px !important;
+  }
+}

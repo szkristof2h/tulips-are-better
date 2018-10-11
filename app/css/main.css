@@ -1,0 +1,51 @@
+@import 'settings';
+@import 'common/common';
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fontMontserrat);
+  background: #DAE2EC;
+}
+
+.app {
+  @apply --box;
+  width: 720px;
+  margin: 0 auto;
+  height: 100%;
+  font-weight: normal;
+  font-smoothing: antialiased;
+  position: relative;
+}
+
+@media screen and (max-width: 750px) { 
+  .app {
+    width: 100%;
+  }
+}
+.apap {
+  @apply --box;
+  height: 100%;
+  font-weight: normal;
+  font-smoothing: antialiased;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(300px, 700px) 90px;
+  grid-template-rows: 1;
+}
+
+
+/* Add your global styles below... */
+
+/* ex:
+
+:global {
+  & .red { color: red; }
+  & .blue { color: blue; }
+}
+
+*/

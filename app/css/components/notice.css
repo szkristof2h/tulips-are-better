@@ -1,0 +1,13 @@
+@import 'common/colors';
+
+.notice {
+  display: grid;
+  background: var(--colorPunch);
+  padding: 7px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.notice.green {
+  background: var(--colorGreyblue);
+}

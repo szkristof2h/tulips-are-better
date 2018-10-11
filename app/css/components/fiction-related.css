@@ -1,0 +1,115 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+
+
+.related {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  max-height: 300px;
+  margin-bottom: 15px;
+  font-size: var(--fontText);
+  color: white;
+}
+
+.related a:hover {
+  text-decoration: underline;
+}
+
+.related >.cover {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 200px;
+}
+
+.related > .header {
+  display: grid;
+  grid-column: 2;
+  padding: 6px 5px;
+  background: var(--colorGreen);
+  font-size: var(--fontL);
+  text-align: center;
+}
+
+.related > .series {
+  display: grid;
+  grid-column: 2;
+  align-content: start;
+  height: 261px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  background: white;
+  color: black;
+}
+
+.related > .series > .container {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+
+}
+.related > .series > .container:hover {
+  background: #e1e1e1;
+}
+
+.related > .series::-webkit-scrollbar {
+  width: 12px;
+}
+
+.related > .series::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.related > .series >.container > .num {
+  padding: 6px 5px;
+  border-right: 1px solid black;
+  font-size: var(--fontM);
+  text-align: center;
+}
+
+.related > .series >.container > .title {
+  padding: 6px 10px;
+  font-size: var(--fontM);
+  border-right: 1px solid black;
+}
+
+.related > .series >.container > .year {
+  padding: 6px 10px;
+  font-size: var(--fontM);
+}
+
+
+@media screen and (max-width: 750px) {
+  .related {
+    grid-template-columns: 1fr;
+  }
+  
+  .related > .cover {
+    display: none;
+    width: 150px;
+  }
+  
+  .related > .header {
+    grid-column: 1 / span 2;
+  }
+  
+  .related > .series {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 525px) and (max-width: 750px) {
+  .related > .header {
+    grid-column: 1 / span 2;
+  }
+
+  .related > .series {
+    grid-column: 1 / span 2;
+  }
+}

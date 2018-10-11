@@ -1,0 +1,241 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+.hide {
+  display: none;
+}
+
+.toc {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 0px;
+  min-height: 270px;
+  max-height: 415px;
+  margin-bottom: 15px;
+  padding-bottom: 7px;
+  background: var(--colorGreen);
+  color: white;
+}
+
+.toc > .header {
+  grid-column: 1;
+  grid-row: 1;
+  max-height: 39px;
+}
+
+.toc > .header > .title {
+  display: block;
+  padding: 0;
+  padding: 6px 0;
+  background: url("../../images/fiction/downa_w39.png") no-repeat right;
+  font-size: var(--fontL);
+  text-align: center;
+}
+
+.toc > .header > .flipped {
+  background: url("../../images/read_w40.png") no-repeat right;
+}
+
+.toc > .header > .container {
+  position: absolute;
+  width: 100%;
+  background: #eee;
+  padding: 0 0 5px 0;
+  border-right: 7px solid var(--colorGreen);
+  border-left: 7px solid var(--colorGreen);
+}
+
+.select {
+  margin: 0;
+  padding: 0 0 7px 0;
+  min-height: 226px;
+  max-height: 371px;
+  overflow: auto;
+}
+
+.select::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eee;
+}
+
+.select::-webkit-scrollbar-thumb {
+  outline: 1px solid slategrey;
+}
+
+.select > .option {
+  padding: 6px 10px;
+  background: #eee;
+  text-align: left;
+  color: black;
+}
+
+.select > .option:hover {
+  background-color: #e1e1e1;
+}
+
+.select > .selected {
+  background-color: #e1e1e1;
+}
+
+.select > .selected:hover {
+  background-color: #d8d7d7;
+}
+
+.select::-webkit-scrollbar {
+  width: 12px;
+}
+
+.select::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.toc > .chapters {
+  display: grid;
+  grid-row: 2;
+  grid-auto-rows: 34px;
+  grid-row-gap: 2px;
+  margin: 0 0 0 7px;
+  padding: 0 7px 0 0;
+  max-height: 370px;
+  overflow: auto;
+  list-style: none;
+  font-size: var(--fontM);
+  color: white;
+}
+
+.toc > .chapters::-webkit-scrollbar {
+  width: 12px;
+  background: var(--colorGreen);
+}
+
+.toc > .chapters::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+.toc > .chapters > .chapter > .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.toc > .chapters > .chapter:nth-child(odd) {
+  background: rgb(255, 255, 255, 0.4);
+}
+
+.toc > .chapters > .chapter:nth-child(even) {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+.toc > .chapters > .chapter:hover {
+  background: rgb(255, 255, 255, 0.6);
+}
+
+.toc > .chapters > .chapter div {
+  padding: 6px 7px;
+}
+
+@media screen and (max-width: 750px) {
+  .infobox {
+    grid-column: 1 / span 2;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 300px auto;
+}
+
+  .infobox > .details {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .infobox > .buttons {
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+  }
+
+  .infobox > .buttons > .button {
+    grid-row: auto;
+    justify-items: center;
+  }
+  
+  .infobox > .buttons > .button > .b-text {
+  }
+
+  .infobox > .buttons > .button > .b-count {
+  }
+
+  .infobox > .extra-buttons {
+    grid-auto-flow: row;
+    grid-row-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .infobox > .extra-buttons > .button:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  .infobox > .extra-buttons > .button:nth-child(5) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+  
+  .infobox > .extra-buttons > .container > .b-text::after {
+    content: '';
+  }
+}
+
+@media screen and (min-width: 525px) and (max-width: 750px) {
+  .infobox {
+    grid-column: 1 / span 2;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 300px auto;
+}
+
+  .infobox > .details {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .infobox > .buttons {
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+  }
+
+  .infobox > .buttons > .button {
+    grid-row: auto;
+    grid-template-columns: 60px 2fr 1fr;
+    grid-template-rows: 45px;
+  }
+  
+  .infobox > .buttons > .button > .b-text {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .infobox > .buttons > .button > .b-count {
+    grid-column: 3;
+    font-size: var(--fontXXL);
+  }
+
+  .infobox > .extra-buttons {
+    grid-auto-flow: row;
+    grid-row-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .infobox > .extra-buttons > .button:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  .infobox > .extra-buttons > .button:nth-child(5) {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+  }
+}

@@ -1,0 +1,381 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(360px, 720px);
+  grid-row-gap: 8px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  font-weight: normal;
+  font-smoothing: antialiased;
+}
+
+.main > .button {
+  @apply --buttonHorizontal;
+}
+
+.main > .button:hover {
+  background: var(--colorGreenH);
+}
+
+.main > .children {
+  display: grid;
+  grid-template-columns: auto;
+  margin-bottom: 12px;
+  padding: 0 7px 7px 7px;
+  color: white;
+  background: var(--colorGreyblue);
+  grid-row-gap: 5px;
+}
+
+.main > .children > .header {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+}
+
+.main > .children > .header {
+  @apply --boxHeader;
+}
+
+.main > .children > .header .icon:hover,
+.main > .children > .header .active {
+  opacity: 0.6;
+}
+
+.main > .children > .chapter  {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1px;
+  align-items: center;
+}
+
+.main > .children > .chapter:nth-child(even) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.main > .children > .chapter:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main > .children > .chapter:nth-child(even) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.main > .children > .chapter:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main > .children > .chapter  a:hover {
+  text-decoration: underline;
+}
+
+.main > .children > .chapter > .container > .container {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+.main > .children > .chapter img {
+  width: 30px;
+  height: 30px;
+}
+
+.main > .children > .chapter img:hover {
+  opacity: 0.6;
+}
+
+.main > .children > .chapter  > .container {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px 200px 70px 70px;
+  justify-items: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 5px;
+  font-size: var(--fontMM);
+}
+
+.main > .children > .chapter .num {
+  text-align: center;
+  font-size: var(--fontL);
+}
+
+.main > .children > .chapter  > .container > .d-text {
+  text-align: center;
+}
+
+.main > .children > .chapter  > .views {
+  display: grid;
+  grid-template-columns: 70px  1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 5px;
+  font-size: var(--fontMM);
+}
+
+.main > .children > .chapter > .header {
+  font-size: var(--fontS);
+}
+
+.main > .children > .chapter > .header.stat {
+  grid-template-columns: 70px 1fr 1fr 1fr 1fr 1fr;
+}
+
+.main > .children > .chapter  > .button {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 54px;
+  height: 50px;
+  border-left: 4px solid var(--colorGreyblue);
+}
+
+.main > .children > .chapter  > .button img {
+  width: 40px;
+  height: 40px;
+}
+
+.main > .children > .expand {
+  text-align: center;
+}
+
+.main > .children > .expand:hover {
+  text-decoration: underline;
+}
+
+
+
+.work {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 60px 55px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin-bottom: 7px;
+}
+
+.work > .cover {
+  grid-row: 1 / span 2;
+  height: 120px;
+}
+
+.work > .cover > .icon {
+  height: 120px;
+}
+
+.work > .details {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  grid-column-gap: 3px;
+}
+
+.work > .details > .container {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto auto auto auto auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: center;
+  padding: 0 7px;
+  background: var(--colorGreen);
+  font-size: var(--fontM);
+  color: white;
+}
+
+.work > .details > .container > .d-text {
+  margin-right: 5px;
+}
+
+.work > .details > .container > .d-text:last-child {
+  margin: 0;
+}
+
+.work > .details > .container > .header {
+  grid-column: 1 / span 10;
+  text-align: center;
+  width: 100%;
+}
+
+.work > .details > .container > .header:hover {
+  text-decoration: underline;
+}
+
+.work > .details >.button {
+  display: grid;
+  background: var(--colorGreen);
+  justify-items: center;
+  align-items: center;
+}
+
+.work > .details >.button:hover {
+  background: var(--colorGreenH);
+}
+
+.work > .views {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+}
+
+.work > .views > .container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background: white;
+  font-size: var(--fontM);
+}
+
+.work > .views > .header {
+}
+
+.work > .views > .d-text {
+}
+
+.ratings {
+  display: grid;
+  grid-row-gap: 5px;
+}
+
+.ratings > .container {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  font-size: var(--fontM);
+  background: var(--colorBrown);
+  color: white;
+}
+
+.ratings > .container > .d-ratings {
+  display: grid;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 5px;
+  border-left: 5px solid var(--colorBg);
+  background: var(--colorBg);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.ratings > .container > .d-ratings > .container {
+  display: grid;
+  grid-template-columns: 1fr 20px 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  background: white;
+  color: black;
+}
+
+.ratings > .container > .d-ratings > .container > .d-icon {
+  grid-column: 2;
+}
+
+.ratings > .container > .d-ratings > .container > .d-num {
+  grid-column: 3;
+}
+
+.ratings > .container > .d-ratings > .container > .d-rating {
+  grid-column: 1 / span 4;
+  grid-row: 2;
+}
+
+.ratings > .container > .d-average {
+}
+
+li > .expand {
+  display: block;
+  background: var(--colorGreyblue);
+  margin: 7px 0;
+  padding: 6px;
+  text-align: center;
+  font-size: var(--fontM);
+  color: white;
+}
+
+li > .expand:hover {
+  opacity: 0.8;
+}
+
+.statistics {
+  @apply --boxGreen;
+  grid-template-columns: 1fr 230px 63px 85px 76px 54px;
+  grid-column-gap: 3px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.statistics > .title {
+  grid-column: 1 / span 6;
+  @apply --boxHeader;
+}
+
+.statistics > .header {
+  margin-bottom: 7px;
+  justify-self: center;
+}
+
+.statistics > .header.active {
+  background: rgb(255, 255, 255, 0.4);
+}
+
+.statistics > .header:hover {
+  background: rgb(255, 255, 255, 0.6);
+}
+
+.statistics > .header {
+  padding: 5px;
+}
+
+.statistics > .container {
+  display: grid;
+  grid-column: 1 / span 6;
+  grid-column-gap: 3px;
+  grid-row-gap: 2px;
+  justify-self: normal;
+  font-size: var(--fontS);
+  text-align: center;
+}
+
+.statistics > .container.monthly {
+  grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+}
+
+.statistics > .container.weekly, .statistics > .container.yearly {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.statistics > .container.daily {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.statistics > .container .num,
+.statistics > .container .m {
+  width: 100%;
+  height: 24px;
+  padding: 3px 0;
+  background: rgb(255, 255, 255, 0.4);
+}
+
+.statistics > .container .num:nth-child(even),
+.statistics > .container .m:nth-child(even) {
+  background: rgb(255, 255, 255, 0.2);
+}
+
+
+@media screen and (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+}

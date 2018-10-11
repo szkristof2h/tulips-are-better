@@ -1,0 +1,49 @@
+
+:root {
+
+  --fontMontserrat:           'Montserrat', Helvetica, Arial, sans-serif;
+
+  --fontText:                 16px;
+
+  --fontSmall:                12px;
+  --fontMedium:               16px;
+  --fontLarge:                21px;
+  --fontHuge:                 28px;
+  
+  --fontXS:                   12px;
+  --fontS:                    14px;
+  --fontM:                    18px;
+  --fontL:                    22px;
+  --fontXL:                   24px;
+  --fontXXL:                  26px;
+
+  --fontSP:                   15px;
+  --fontMM:                   17px;
+  --fontMP:                   19px;
+  --fontML:                   21px;
+
+  --heading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  --subHeading {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  --normal {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  --small {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+}

@@ -1,0 +1,127 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(360px, 720px);
+  grid-row-gap: 8px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  font-weight: normal;
+  font-smoothing: antialiased;
+}
+
+.works  {
+  display: grid;
+  grid-row-gap: 12px;
+}
+
+.works > .work {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 60px 55px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.works > .work > .cover {
+  grid-row: 1 / span 2;
+  height: 120px;
+}
+
+.works > .work > .cover > .icon {
+  height: 120px;
+}
+
+.works > .work > .details {
+  display: grid;
+}
+
+.works > .work > .details > .container {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto auto auto auto auto auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: center;
+  padding: 0 7px;
+  background: var(--colorGreen);
+  font-size: var(--fontM);
+  color: white;
+}
+
+.works > .work > .details > .container > .d-text {
+  margin-right: 5px;
+}
+
+.works > .work > .details > .container > .d-text:last-child {
+  margin: 0;
+}
+
+.works > .work > .details > .container > .header {
+  grid-column: 1 / span 10;
+  text-align: center;
+  width: 100%;
+}
+
+.works > .work > .details > .container > .header:hover {
+  text-decoration: underline;
+}
+
+.works > .work > .views {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 5px;
+}
+
+.works > .work > .views > .container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background: white;
+  font-size: var(--fontM);
+}
+
+.works > .work > .views > .header {
+}
+
+.works > .work > .views > .d-text {
+}
+
+.works > li > .expand {
+  display: block;
+  background: var(--colorGreyblue);
+  margin: 7px 0;
+  padding: 6px;
+  text-align: center;
+  font-size: var(--fontM);
+  color: white;
+}
+
+.works > li > .expand:hover {
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+
+  .works > .work > .views > .container {
+    font-size: var(--fontSP);
+  }
+}

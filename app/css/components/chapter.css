@@ -1,0 +1,332 @@
+@import 'common/colors';
+@import 'common/common';
+@import 'common/typography';
+
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(360px, 720px);
+  grid-row-gap: 8px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  font-weight: normal;
+  font-smoothing: antialiased;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: 60px;
+  grid-column-gap: 7px;
+}
+
+.navigation > .button {
+  background: var(--colorGreen);
+}
+
+.navigation > .button:first-child {
+  transform: rotate(180deg);
+}
+
+.navigation > .b-text {
+  background: var(--colorGreen);
+  padding: 16px 0;
+  text-align: center;
+  font-size: var(--fontL);
+  color: white;
+}
+
+.navigation > .b-text.left {
+  grid-column: 1 / span 2;
+}
+
+.navigation > .b-text.right {
+  grid-column: 2 / span 2;
+}
+
+.navigation > a:hover {
+  background: var(--colorGreenH);
+}
+
+.article {
+  padding: 0;
+  background: white;
+}
+
+.article > .header {
+  padding: 12px 14px 5px 14px;
+  font-size: var(--fontL);
+  text-align: center;
+  background: white;
+}
+
+.article > .header.after {
+  border-top: 1px solid gray;
+  margin: 3px 14px 0 14px;
+}
+
+.article > .header > p {
+  margin: 0;
+}
+
+.article > .note {
+  padding: 4px 14px 12px 14px;
+  margin: 0 14px;
+  font-size: var(--fontL);
+  text-align: justify;
+  font-style: italic;
+  background: white;
+  border-bottom: 1px solid gray;
+}
+
+.article > .text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.article > .note.after {
+  border-bottom: none;
+}
+
+.article > .note > p {
+  margin: 0;
+}
+
+.article > .chapter {
+  margin: 0 14px;
+  padding: 5px 0 2px 0;
+  font-size: var(--fontL);
+  text-align: center;
+}
+
+.article > .volume {
+  margin: 0 14px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid gray;
+  font-size: var(--fontM);
+  text-align: center;
+  color: gray;
+}
+
+.main > .details {
+  display: grid;
+  grid-template-columns: 20px auto 1fr;
+  grid-auto-rows: 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  padding: 9px;
+  background: #BBB477;
+  color: white;
+}
+
+.main > .details:nth-child(6) {
+  grid-template-columns: 20px auto 1fr 20px auto 1fr;
+  margin-top: -12px;
+  padding-top: 0;
+}
+
+.main > .details > .icon {
+  max-width: 20px;
+}
+
+.main > .details > .plus {
+  align-self: center;
+  font-size: var(--fontXXL);
+  color: #BBB477;
+}
+
+.main > .details > .plus:hover {
+  color: white;
+}
+
+.main > .details > .d-text:hover + .plus {
+  color: white;
+}
+
+.main > .details > .d-tex {
+  padding-left: 3px;
+}
+
+.main > .details > .universe > a {
+  padding: 0 6px 0 6px;
+}
+
+.main > .details > .universe > a:first-child {
+  padding: 0 6px 0 0;
+}
+
+.main > .details > .d-text > a:hover {
+  text-decoration: underline;
+}
+
+.main > .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 60px;
+  grid-column-gap: 5px;
+}
+
+.main > .buttons > .button {
+  display: grid;
+  grid-row: 1;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 60px;
+  align-items: center;
+  font-size: var(--fontL);
+  background: var(--colorGreen);
+  color: white;
+}
+
+.main > .buttons > .button.active {
+  background: #204d20;
+}
+
+.main > .buttons > .button:last-child {
+  display: grid;
+  grid-row: 1;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  font-size: var(--fontL);
+  background: red;
+  color: white;
+}
+
+.main > .buttons > .button:hover {
+  background: var(--colorGreenH);
+}
+
+.main > .buttons > .button:last-child:hover {
+  background: rgb(255, 0, 0, 0.6);
+}
+
+.main > .buttons > .button > .b-text {
+  max-height: 60px;
+}
+
+.main > .sharebox {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  color: white;
+  font-size: var(--fontL);
+}
+
+.main > .sharebox > .button {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 55px;
+  background: #3b5998;
+  padding-right: 10px;
+}
+
+.main > .sharebox > .butston:last-child {
+  width: 55px;
+  grid-template-columns: 55px;
+}
+
+.main > .sharebox > .facebook {
+  background: #3b5998;
+}
+
+.main > .sharebox > .twitter {
+  background: #0084b4;
+}
+
+.main > .sharebox > .reddit {
+  background: #ff4500;
+}
+
+.main > .sharebox > .pinterest {
+  background: #ca2025;
+}
+
+.main > .sharebox > .email {
+  background: slategrey;
+}
+
+.main > .sharebox > .button:hover {
+  opacity: 0.6;
+}
+
+.main > .sharebox > .facebook > .b-text{
+  justify-self: center;
+}
+
+.main > .sharebox > .button > a {
+  display: grid;
+  align-content: center;
+}
+
+.content {
+  display: grid;
+  grid-gap: 4px;
+}
+
+@media screen and (max-width: 750px) {
+  .logo {
+    display: none;
+  }
+
+  .main > .details:nth-child(5) {
+    grid-template-columns: 20px auto 1fr;
+  }
+
+  .main > .buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5px;
+  }
+
+  .main > .buttons > .button,
+  .main > .buttons > .button:last-child {
+    grid-row: auto;
+    font-size: var(--fontM);
+  }
+
+  .main > .buttons > .button:last-child a:last-child::after {
+    content: "REPORT";
+  }
+
+  .main > .sharebox {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: unset;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    font-size: var(--fontL);
+  }
+
+  .main > .sharebox > .button:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media screen and (min-width: 525px) and (max-width: 750px) {
+  .article-titkle {
+    font-size: var(--fontL);
+  }
+
+  .main > .details:nth-child(5) {
+    grid-template-columns: 20px auto 1fr 20px auto 1fr;
+  }
+
+  .main > .buttons {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5px;
+  }
+
+  .main > .buttons > .button,
+  .main > .buttons > .button:last-child {
+    grid-row: auto;
+  }
+}
