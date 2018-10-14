@@ -17,7 +17,7 @@ Demo site: **[https://tulips-218223.appspot.com](https://tulips-218223.appspot.c
 
 Restructuring & rewriting React components and the reducers
 
-Notes & issues:
+## Notes & issues:
 
 - I've updated most of the dependencies from reactGo to be up-to-date, but not all.
     - The site is using webpack 4 (updated from 2), but I didn't have the time to test its performance yet, and without much experience with it I'm not sure how good its configuration is.
