@@ -55,13 +55,27 @@ class Home extends Component {
         <div className={cx('slider')}>
           <img className={cx('thumbnail', 'selected')} src={cover} />
           <div className={cx('selector')}>
-            {fictionIds.map((f, i) => <img key={`sCo${f}${i}`} className={cx('thumbnail')} src={cover} />)}
+            {fictionIds.map((f, i) => 
+            <Link
+              key={`sCo${f}${i}`}
+              className={cx('container')}
+              type='fiction'
+              action='slider'
+              data={{ id: f }}
+              name=''>
+                <img className={cx('thumbnail')} src={cover} />
+            </Link>
+
+            )}
             {empty.map(e => e)}
             <div className={cx('placeholder')}></div>
           </div>
           <div className={cx('details')}>
+            <div className={cx('title')}>
+              {fictions[activeFiction].title} 
+            </div>
             <div className={cx('categories')}>
-              {fictions[activeFiction].title} ({fictions[activeFiction].categories.map(c => c + ' ')})
+              ({fictions[activeFiction].categories.map(c => c + ' ')})
             </div>
             <Link 
               className={cx('button')}

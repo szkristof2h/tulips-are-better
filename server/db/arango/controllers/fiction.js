@@ -228,8 +228,9 @@ export function getHome(req, res) {
            title: p.title })
       FILTER parents[1].featured
       LIMIT 3
+      LET end = DOCUMENT(parents[1].end).end
       LET num = c.num ? '' : (
-        FOR a IN ANY SHORTEST_PATH c._id TO parents[0].end GRAPH 'nextToGraph' RETURN a._key
+        FOR a IN ANY SHORTEST_PATH c._id TO end GRAPH 'nextToGraph' RETURN a._key
       )
       LET parentStat = c.num ? 0 : (FOR s IN INBOUND parents[1].id GRAPH 'statsGraph'
         RETURN { chapters: s.chapterCount }
@@ -283,8 +284,9 @@ export function getHome(req, res) {
           RETURN { id: p._id, cover: p.cover, end: p.end, featured: p.featured, num: p.num, summary: p.body,
             title: p.title }
         )
+        LET end = DOCUMENT(parents[1].end).end
         LET num = c.num ? '' : (
-          FOR a IN ANY SHORTEST_PATH c._id TO parents[0].end GRAPH 'nextToGraph' RETURN a._key
+          FOR a IN ANY SHORTEST_PATH c._id TO end GRAPH 'nextToGraph' RETURN a._key
         )
         LET parentStat = c.num ? 0 : (FOR s IN INBOUND parents[1].id GRAPH 'statsGraph'
           RETURN { chapters: s.chapterCount }

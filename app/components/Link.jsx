@@ -168,6 +168,7 @@ class Link extends Component {
           case 'reviews': return { link: `${data.id}/reviews/${data.offset}`, method: 'get', redirect: false };
           case 'series': return { link: `series/${data.title}/${data.id ? data.id : data.fId}`, method: 'none',
             redirect: true };
+          case 'slider': return { link: ``, method: 'normal', name: 'FICTION_SLIDER', redirect: false };
           case 'sponsors': return { link: `fiction//${data.id}/sponsors`, method: 'get', redirect: true };
           case 'start': return { link: `fiction/start/${data.id}`, method: 'none', redirect: true };
           case 'subscribe': return { link: `fiction/subscribe/${data.id}`, method: 'get', redirect: false };

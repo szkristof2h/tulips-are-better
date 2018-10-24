@@ -9,6 +9,7 @@ const activeFiction = (
   switch (action.type) {
     case types.FETCHING:
       return '';
+    case 'FICTION_SLIDER':
     case types.GET_AUTHOR_WORKS_SUCCESS:
     case types.GET_CHAPTER_SUCCESS:
     case types.GET_DASHBOARD_SUCCESS:

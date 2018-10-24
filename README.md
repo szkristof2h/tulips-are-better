@@ -13,7 +13,7 @@ I've been working on it for about 2-3 years in my free time, starting as a begin
 Demo site: **[https://tulips-218223.appspot.com](https://tulips-218223.appspot.com)**
 
 
-## Currently working on (see todos for a list of future plans)
+## Currently working on (see roadmap for a list of future plans)
 
 Restructuring & rewriting React components and the reducers
 
@@ -54,7 +54,7 @@ Reintroduce unit testing
 ## Site Features:
 
 - Working:
-    - Home page (except slider)
+    - Home page
     - Fiction page (except add to list, donate and subscribe buttons; also there is no option for monetizing your work yet)
     - Article page
     - Profile page (except the navigation below the friends list)

@@ -13,7 +13,7 @@ export default class Notice extends Component {
           As user registration is currently not implemented, you'll be logged in as a sample user.
         </div>
         <div className={cx('notice')}>
-          The site is still in its early phases and thus many features aren't working: Conversations, Lists (can't create new ones), Browse, Search, Settings, About, Navigation (doesn't work on mobile and tablet resolutions) and the slider on the Front Page.
+          The site is still in its early phases and thus many features aren't working: Conversations, Lists (can't create new ones), Browse, Search, Settings, About and Navigation (doesn't work on mobile and tablet resolutions).
         </div>
       </Fragment>
     );
