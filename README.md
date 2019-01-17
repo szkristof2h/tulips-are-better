@@ -10,12 +10,13 @@ Tulips Are Better is a responsive website where people can post and manage their
 
 I've been working on it for about 2-3 years in my free time, starting as a beginner and learning web programming on the way. There are parts of the site where the code hasn't been updated/reworked for some time and may include badly written code.
 
-Demo site: **[https://tulips-218223.appspot.com](https://tulips-218223.appspot.com)**
+Demo site: **[https://tulipsarebetter.azurewebsites.net/](https://tulipsarebetter.azurewebsites.net/)**
 
 
 ## Currently working on (see roadmap for a list of future plans)
 
 Restructuring & rewriting React components and the reducers
+
 
 ## Notes & issues:
 
@@ -47,8 +48,8 @@ This site uses Webpack 4, React, Redux, Node.js and ArangoDB (I've started with 
 7. Rewrite the css files
 8. Adding the option to donate or subscribe for a fiction
 
-Upgrade to the latest redux version
-Reintroduce unit testing
+- Upgrade to the latest redux version
+- Reintroduce unit testing
 
 
 ## Site Features:

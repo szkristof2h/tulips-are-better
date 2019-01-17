@@ -274,9 +274,9 @@ class FictionDashboard extends Component {
             type='dashboard'
             action={activeYear ? 'stat_choose'  : 'no_year'}
             data={activeYear ? { title: 'Choose a month', color: 'green', type: 'dashboard',
-              action: 'stat_choose_confirm', data: { ids: Object.keys(statistics[fiction.statId].views['2018'].months),
+              action: 'stat_choose_confirm', data: { ids: Object.keys(statistics[fiction.statId].views[activeYear ? activeYear : Object.keys(statistics[fiction.statId]).views.filter(k => !['complete', 'uniques'].includes(k))[0]].months),
               type: 'activeMonth', tab: 'daily' },
-              list: Object.keys(statistics[fiction.statId].views['2018'].months).map(m => months[m])} :
+              list: Object.keys(statistics[fiction.statId].views[activeYear ? activeYear : Object.keys(statistics[fiction.statId]).views.filter(k => !['complete', 'uniques'].includes(k))[0]].months).map(m => months[m])} :
               { error: 'Select a year first!'}}
             name={`Choose month: ${activeMonth ? months[activeMonth] : '-'}`} />
           <div className={cx('header', { active: activeTab === 'yearly' })}>
